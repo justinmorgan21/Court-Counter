@@ -64,4 +64,11 @@ public class MainActivity extends AppCompatActivity {
         TextView bScoreDisplay = (TextView) findViewById(R.id.team_b_score);
         bScoreDisplay.setText("" + teamBScore);
     }
+
+    public void reset(View view) {
+        teamAScore = 0;
+        teamBScore = 0;
+        displayAScore();
+        displayBScore();
+    }
 }
