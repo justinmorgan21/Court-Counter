@@ -8,12 +8,14 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     int teamAScore = 0;
+    int teamBScore = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         displayAScore();
+        displayBScore();
     }
 
     public void increaseAScore3(View view) {
@@ -32,10 +34,34 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * This method displays the given quantity value on the screen.
+     * This method displays Team A score value on the screen.
      */
     private void displayAScore() {
         TextView aScoreDisplay = (TextView) findViewById(R.id.team_a_score);
         aScoreDisplay.setText("" + teamAScore);
+    }
+
+
+    public void increaseBScore3(View view) {
+        teamBScore += 3;
+        displayBScore();
+    }
+
+    public void increaseBScore2(View view) {
+        teamBScore += 2;
+        displayBScore();
+    }
+
+    public void increaseBScore1(View view) {
+        teamBScore += 1;
+        displayBScore();
+    }
+
+    /**
+     * This method displays Team B score value on the screen.
+     */
+    private void displayBScore() {
+        TextView bScoreDisplay = (TextView) findViewById(R.id.team_b_score);
+        bScoreDisplay.setText("" + teamBScore);
     }
 }

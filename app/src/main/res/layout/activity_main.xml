@@ -3,50 +3,103 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     tools:context="com.example.android.courtcounter.MainActivity">
 
-    <TextView
-        android:id="@+id/team_title"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:padding="4dp"
-        android:text="Team A" />
+        android:orientation="vertical"
+        android:layout_weight="1">
 
-    <TextView
-        android:id="@+id/team_a_score"
-        android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/team_a_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="4dp"
+            android:text="Team A" />
+
+        <TextView
+            android:id="@+id/team_a_score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="4dp"
+            android:textSize="64sp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_orange_light"
+            android:layout_margin="8dp"
+            android:text="+3 points"
+            android:onClick="increaseAScore3"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_orange_light"
+            android:layout_margin="8dp"
+            android:text="+2 points"
+            android:onClick="increaseAScore2"/>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_orange_light"
+            android:layout_margin="8dp"
+            android:text="free throw"
+            android:onClick="increaseAScore1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/team_title"
-        android:gravity="center_horizontal"
-        android:padding="4dp"
-        android:textSize="64dp" />
+        android:orientation="vertical"
+        android:layout_weight="1">
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@android:color/holo_orange_light"
-        android:layout_margin="8dp"
-        android:text="+3 points"
-        android:onClick="increaseAScore3"/>
+        <TextView
+            android:id="@+id/team_b_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="4dp"
+            android:text="Team B" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@android:color/holo_orange_light"
-        android:layout_margin="8dp"
-        android:text="+2 points"
-        android:onClick="increaseAScore2"/>
+        <TextView
+            android:id="@+id/team_b_score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="4dp"
+            android:textSize="64sp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_orange_light"
+            android:layout_margin="8dp"
+            android:text="+3 points"
+            android:onClick="increaseBScore3"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_orange_light"
+            android:layout_margin="8dp"
+            android:text="+2 points"
+            android:onClick="increaseBScore2"/>
 
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@android:color/holo_orange_light"
-        android:layout_margin="8dp"
-        android:text="free throw"
-        android:onClick="increaseAScore1"/>
-
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_orange_light"
+            android:layout_margin="8dp"
+            android:text="free throw"
+            android:onClick="increaseBScore1"/>
+    </LinearLayout>
 
 </LinearLayout>
